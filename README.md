@@ -8,27 +8,31 @@
 ![Tested][tested]
 ![autor]
 
-<h2 align="center"> FAQUE: is a hacking tool </h3>
+<h2 align="center"> FAQUE: EMAIL SPOOFING </h3>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/66902449/92422044-c42d7f00-f138-11ea-9c4c-c4e4bc7ce49c.png" alt="PREVIEW">
 </p>
 
- * <b>Spoof Mail</b>: Now you can do spoof mail with +3 SERVERS.
- * <b>Phishing</b>: With more 3+ TEMPLATES for Social Enginer.
- 
-<hr>
+<table border="1" align="center"><tr><td>
+<h2 align="center"> REQUIREMENTS: </h2>
 
-# Requirements:
-
-For users <b>Linux</b> and <b>Termux</b> users the requiriment are the same:
-
-* [x] Kep OS update.
-* [x] GIT.
+* [x] cURL
+* [x] Bash
 * [x] Ngrok
-* [x] XAMPP (on windows)
+</td><td><h2 align="center"> USE: </h2>
 
-<hr>
+<b>1.</b> First: Email Spoof example: <facebook@support.com>.<br>
+<b>2.</b> After create Message and title.<br>
+<b>3.</b> Finally send.
+
+</td><td>
+<h2 align="center"> TOOLS: </h2>
+
+* Ngro fixed.
+* Make your server.
+* Social Enginer Templates.
+</td></tr></table>
 
 # Install:
 

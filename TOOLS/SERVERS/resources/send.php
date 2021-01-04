@@ -16,7 +16,7 @@ if ($_POST)
 if($mail) 
 
 {
-    echo "Email enviado ".$to;
+    echo "Email enviado a ".$to;
 }
 
 }

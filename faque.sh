@@ -38,8 +38,6 @@ function main(){
 }
 
 function server(){
-    clear
-    banner
     sleep 1
     echo -e "${verde} Servidor: ${rojo} > 1${final} \n"
     echo -e "${verde} Servidor: ${rojo} > 2${final} \n"
