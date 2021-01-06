@@ -3,7 +3,7 @@
 # https://github.com/ByDog3r/Faque
 
 function banner(){
-    echo -e "${rojo}"
+    echo -e "${red}"
     echo -e "▄████  ██   ▄▄ █    ▄   ▄███▄   "
     echo -e "█▀   ▀ █ █ █   █     █  █▀   ▀  "
     echo -e "█▀▀    █▄▄█ ▀▀▀█  █   █ ██▄▄    "
@@ -11,39 +11,33 @@ function banner(){
     echo -e " █        █     █ █▄ ▄█ ▀███▀   "
     echo -e "  ▀      █       ▀ ▀▀▀          "
     echo -e "        ▀                       "
-    echo -e "     ${verde}    Made for @ByDog3r\n"
+    echo -e "     ${green} Made for @ByDog3r${end}\n"
 }
 
+
 PWD=$(pwd)
-source ${PWD}/variables.sh
+source ${PWD}/.tools/doc/.var.sh
+
 
 trap ctrl_c int
 function ctrl_c(){
     clear
     banner
-    echo -e "\n${verde}[${blanco}${parpadeo}*${final}${verde}] You are exiting to script. ${final}"
-    sleep 3
-    clear
+    echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+    sleep 3; clear
     exit 1
 }
 
 
 
-
-function main(){
-    clear
-    banner
-    sleep 1
-    server
-}
-
 function server(){
     sleep 1
-    echo -e "${verde} Servidor: ${rojo} > 1${final} \n"
-    echo -e "${verde} Servidor: ${rojo} > 2${final} \n"
-    echo -e "${verde} Servidor: ${rojo} > 3${final} \n"
-    read servidor
-    case $servidor in
+    echo -e "${green} Server: ${red} > 1${end} \n"
+    echo -e "${green} Server: ${red} > 2${end} \n"
+    echo -e "${green} Server: ${red} > 3${end} \n"
+    read -p $'\033[1;32m Server \033[0;31m> \033[0m' server
+
+    case $server in
 
         1) server=$server1
         fakemail
@@ -56,58 +50,67 @@ function server(){
         3) server=$server3
         fakemail
         ;;
-        *) echo "La opcion que ingreso no existe."
+        *)  echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+            sleep 3; clear
         ;;
+
     esac
 }
 
 
 function fakemail(){
-    clear
-    banner
-    sleep 1
-    echo -e "${verde} Email spoof: ${rojo} >${final} \n"
-    read faker
-    clear
-    banner
-    echo -e "${verde} Receptor email: ${rojo} >${final} \n"
-    read fakiado
-    clear
-    banner
-    echo -e "${verde} Title of message: ${rojo} >${final} \n"
-    read title
-    clear
-    banner
-    echo -e "${verde} Message: ${rojo} >${final} \n"
-    read message
-    sleep 1
-    clear
-    banner
-    echo -e "${verde} The mail will send be like: \n ${final}" 
-    echo -e "${rojo} > ${blanco} Spoofer: $faker ${final} \n"
-    echo -e "${rojo} > ${blanco} Target: $fakiado ${final} \n"
-    echo -e "${rojo} > ${blanco} Title: $title ${final} \n"
-    echo -e "${rojo} > ${blanco} Message: $message ${final} \n"
-    sleep 1
-    echo -e "${verde}Are you sure to send this mail? ${rojo}[y/n]${final}"
-		read Seguro
-		case $Seguro in
-			y)
-			curl --data "destinatario=$fakiado && asunto=$title && mensaje=$message && remitente=$faker" $server 
-            clear
-            banner
-            sleep 1
-            echo -e "\n${verde}[${rojo}+${verde}]${final} Sended. ${final}"
-			;;	
-			n)
-				clear
-                banner
-                exit 1
-            ;;
-            *) echo "La opcion que ingreso no existe."
-            ;;
-        esac
 
+    clear; banner; sleep 1
+
+    read -p $'\033[1;32mEMAIL SPOOFER \033[0;31m> \033[0m' faker
+    clear; banner
+
+    read -p $'\033[1;32mTARGET EMAIL \033[0;31m> \033[0m' fakiado
+    clear; banner
+
+    read -p $'\033[1;32mHEAD (title) \033[0;31m> \033[0m' title
+    clear; banner
+
+    read -p $'\033[1;32mBODY MESSAGE \033[0;31m> \033[0m' message
+    sleep 1; clear; banner
+
+    echo -e "${white} The mail will send be like: \n ${end}" 
+    echo -e "${red} > Spoofer:${green} $faker ${end} \n"
+    echo -e "${red} > Target:${green}  $fakiado ${end} \n"
+    echo -e "${red} > Title:${green}  $title ${end} \n"
+    echo -e "${red} > Message:${green}  $message ${end} \n"
+    
+    sleep 1
+
+    read -p $'\033[1;32m Are you sure to send this mail? \033[0;31m[y/N] > \033[0m' sure
+    case $sure in
+
+		y)
+		curl --data "destinatario=$fakiado && asunto=$title && mensaje=$message && remitente=$faker" $server 
+        clear
+        banner
+        sleep 1
+        echo -e "\n${green}[${red}+${green}]${end} Sended. "
+		;;	
+
+		n)
+			clear
+            banner
+            exit 1
+        ;;
+
+        *) echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+        ;;
+
+    esac
+
+}
+
+function main(){
+    clear
+    banner
+    sleep 1
+    server
 }
 
 main
