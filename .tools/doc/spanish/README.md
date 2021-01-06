@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.postimg.cc/6pPQ4MfP/Black-and-White-Natural-Makeup-Logo.png" title="FAQUE v.1.5">
+<img src="https://i.postimg.cc/6pPQ4MfP/Black-and-White-Natural-Makeup-Logo.png" title="FAQUE v.1.5" width="450" height="450">
 </p>
 
 <p align="center">
