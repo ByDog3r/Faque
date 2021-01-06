@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/ByDog3r/FAQUE/blob/main/english/README.md><img title="ENGLISH" src="https://img.shields.io/badge/Translate%20to-ENGLISH-inactive?style=for-the-badge&logo=google-translate"></a>
+<a href="https://github.com/ByDog3r/FAQUE/blob/ByDog3r/.tools/doc/english/README.md"><img title="ENGLISH" src="https://img.shields.io/badge/Translate%20to-ENGLISH-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
 ## INSTALL: 
@@ -39,6 +39,13 @@ $ bash faque.sh
 $ ./faque.sh
 ```
 
+<h2 align="center"> Screenshots: </h2>
+
+|  SERVIDORES    |       MUESTRA 1        |	   MUESTRA 2     |
+| -------------- | ---------------------- | ----------------  |  
+|![Index](https://github.com/ByDog3r/FAQUE/blob/ByDog3r/.tools/doc/images/servers.png)|![FAQUE](https://github.com/ByDog3r/FAQUE/blob/ByDog3r/.tools/doc/images/message.png)|![MAIL](https://github.com/ByDog3r/FAQUE/blob/ByDog3r/.tools/doc/images/sample.png)|
+
+
 ## DOCUMENTACIÓN:
 
 |                Registro                   |                 Datos                  |
@@ -53,10 +60,3 @@ $ ./faque.sh
 |         FAQUE                             |                 1.1.2                  |
 |         FAQUE                             |                 1.2.3                  |
 |         FAQUE                             |                 1.5.0                  |
-
-
-<h2 align="center"> Screenshots: </h2>
-
-|  SERVIDORES    |       MUESTRA 1        |	   MUESTRA 2     |
-| -------------- | ---------------------- | ----------------  |  
-|![Index](https://github.com/ByDog3r/FAQUE/blob/main/images/servers.png)|![FAQUE](https://github.com/ByDog3r/FAQUE/blob/main/images/message.png)|![MAIL](https://github.com/ByDog3r/FAQUE/blob/main/images/sample.png)|
