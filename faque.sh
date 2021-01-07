@@ -11,12 +11,12 @@ function banner(){
     echo -e " █        █     █ █▄ ▄█ ▀███▀   "
     echo -e "  ▀      █       ▀ ▀▀▀          "
     echo -e "        ▀                       "
-    echo -e "     ${green} Made for @ByDog3r${end}\n"
+    echo -e "    ${green} @ByDog3r > V.1.5.2${end}\n"
 }
 
 
 PWD=$(pwd)
-source ${PWD}/.tools/doc/.var.sh
+source ${PWD}/.tools/doc/var.sh
 
 
 trap ctrl_c int
@@ -50,7 +50,8 @@ function server(){
         3) server=$server3
         fakemail
         ;;
-        *)  echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+        *)  clear; banner
+            echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
             sleep 3; clear
         ;;
 
@@ -99,7 +100,9 @@ function fakemail(){
             exit 1
         ;;
 
-        *) echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+        *)  clear; banner
+            echo -e "\n${green}[${white}${flicker}*${end}${green}] You are exiting to script. ${end}"
+            sleep 3
         ;;
 
     esac
